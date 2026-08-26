@@ -88,7 +88,7 @@
   }
 
   var iosGallery = document.querySelector("[data-ios-gallery]");
-  var iosVariant = "Light";
+  var iosVariant = "Dark";
 
   function renderIosGallery() {
     if (!iosGallery) return;
