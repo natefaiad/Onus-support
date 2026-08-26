@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Onus</title>
+<meta name="description" content="Privacy Policy for Onus, a private workout tracker for iPhone and Apple Watch.">
+
+<link rel="icon" type="image/png" sizes="32x32" href="Branding/icon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Branding/icon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Branding/icon-256x256.png">
+
+<link rel="stylesheet" href="css/style.css">
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("onus-theme");
+      if (stored === "light" || stored === "dark") {
+        document.documentElement.setAttribute("data-theme", stored);
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="Branding/icon-256x256.png" alt="">
+      <span>Onus</span>
+    </a>
+    <nav class="nav-links" aria-label="Section navigation">
+      <a href="index.html#screenshots">Screenshots</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#support">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <article class="doc wrap">
+    <a class="back-link" href="index.html">← Back to Onus support</a>
+
+    <h1>Privacy Policy for Onus</h1>
+    <p class="updated">Last updated: 2026-08-25</p>
+
+    <p>Onus ("the app") is a workout tracking app for iPhone and Apple Watch. This policy describes what data the app accesses and how it is used.</p>
+
+    <h2>Summary</h2>
+    <p>Onus does not collect, transmit, or sell any of your data to us or to any third party. All workout data is created and stored on your device, syncs only between your own iPhone and Apple Watch, and is backed up (if you have iCloud enabled) only to your own private iCloud account — never to a server we operate. The app contains no analytics, no advertising, and no third-party tracking of any kind.</p>
+
+    <h2>Data Onus Stores</h2>
+    <p>Workouts, exercises, programs, and personal records you create are stored locally on your device using Apple's SwiftData framework. This data is never uploaded to any server operated by us or any third party. If you delete the app, this data is deleted with it (unless you have an Onus iCloud backup, see below, or iCloud device backups enabled at the iOS level).</p>
+    <p>Onus also stores a small number of app preferences (e.g. your chosen weight unit, appearance setting, and rest-timer defaults) locally using <code>UserDefaults</code>, Apple's standard on-device settings storage. These are never transmitted anywhere.</p>
+
+    <h2>Apple Watch Sync</h2>
+    <p>If you use the Onus Watch App, your active workout and program data are synced directly between your iPhone and Apple Watch using Apple's WatchConnectivity framework. This is a direct, on-device connection between your own paired devices — it does not pass through any external server.</p>
+
+    <h2>iCloud Backup</h2>
+    <p>Onus automatically saves a private, compressed backup of your programs, workouts, and history to your iCloud Drive after you finish a workout and periodically while the app is running. You can also trigger a backup or restore from a previous one manually from <strong>Settings → Import/Export Data → iCloud Backup</strong>.</p>
+    <p>This backup is written to your own private iCloud account using Apple's iCloud APIs — it is never sent to a server operated by us, and no one else (including us) can access it. It is governed by Apple's iCloud terms and your device's iCloud storage. You can turn off iCloud for Onus, or delete any backup, at any time in <strong>Settings → [your name] → iCloud → Apps Using iCloud</strong> on your iPhone. Restoring from a backup only adds data — it never deletes anything already on your device.</p>
+
+    <h2>HealthKit</h2>
+    <p>With your permission, Onus reads the following from Apple Health:</p>
+    <ul>
+      <li>Heart rate (to display during a workout)</li>
+      <li>Active energy burned (to display calories burned during a workout)</li>
+      <li>Body mass (used only to estimate calories burned when the Watch doesn't supply a measured value; this estimate is clearly labeled "Estimated" in the app)</li>
+    </ul>
+    <p>With your permission, Onus writes completed workouts to Apple Health so they appear alongside your other activity data.</p>
+    <p>You can review or revoke Onus's Health access at any time in <strong>Settings → Privacy &amp; Security → Health → Onus</strong> on your iPhone. Health data is managed entirely by Apple's HealthKit framework and is never sent to us or any third party — it stays within Apple's Health ecosystem on your device.</p>
+
+    <h2>Notifications</h2>
+    <p>Onus asks for permission to show local notifications so the rest timer can alert you with a sound when it ends, even if you've left the app. These are local, on-device notifications only — Onus does not use push notifications and no notification content is sent to us or anyone else. You can revoke this permission at any time in <strong>Settings → Notifications → Onus</strong> on your iPhone.</p>
+
+    <h2>Third-Party Links</h2>
+    <p>The exercise library includes optional links to watch a form-tutorial video for a given exercise. Tapping one opens an in-app browser (not a web view we control) to a third-party site of your choosing:</p>
+    <ul>
+      <li>YouTube</li>
+      <li>muscleandstrength.com</li>
+      <li>musclewiki.com</li>
+      <li>the free-exercise-db project page</li>
+    </ul>
+    <p>These are standard web pages operated by those third parties, subject to their own privacy policies, not ours. Onus does not send any of your data to these sites beyond the search terms needed to load the page (e.g. an exercise name).</p>
+
+    <h2>Analytics &amp; Tracking</h2>
+    <p>Onus contains no analytics SDKs, no crash reporting services, no advertising frameworks, and no tracking of any kind. Nothing about your usage of the app is collected or shared with us or anyone else.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Onus does not knowingly collect data from anyone, so this applies equally regardless of age. The app is not directed at children and does not require account creation.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If this policy changes, the updated version will be posted at this same location with a new "Last updated" date.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:onus.support@gmail.com">onus.support@gmail.com</a></p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">
+        <img src="Branding/icon-256x256.png" alt="">
+        <span>Onus</span>
+      </a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#" data-todo-app-store-link>App Store</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:onus.support@gmail.com">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 Onus. All rights reserved.</span>
+      <span>Made for iPhone &amp; Apple Watch.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
