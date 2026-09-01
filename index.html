@@ -1,326 +1,668 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Onus — Support</title>
-<meta name="description" content="Support, FAQs, and privacy information for Onus, a private workout tracker for iPhone and Apple Watch.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Onus — Support</title>
+    <meta
+      name="description"
+      content="Support, FAQs, and privacy information for Onus, a private workout tracker for iPhone and Apple Watch."
+    />
 
-<link rel="icon" type="image/png" sizes="32x32" href="Branding/icon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="Branding/icon-16x16.png">
-<!-- No 180x180 asset exists in /Branding; icon-256x256.png is the closest larger size and scales down cleanly. -->
-<link rel="apple-touch-icon" sizes="180x180" href="Branding/icon-256x256.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Branding/icon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Branding/icon-16x16.png"
+    />
+    <!-- No 180x180 asset exists in /Branding; icon-256x256.png is the closest larger size and scales down cleanly. -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Branding/icon-256x256.png"
+    />
 
-<link rel="stylesheet" href="css/style.css">
-<script>
-  (function () {
-    try {
-      var stored = localStorage.getItem("onus-theme");
-      if (stored === "light" || stored === "dark") {
-        document.documentElement.setAttribute("data-theme", stored);
-      }
-    } catch (e) {}
-  })();
-</script>
-</head>
-<body>
-
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="nav-brand" href="#top">
-      <img src="Branding/icon-256x256.png" alt="">
-      <span>Onus</span>
-    </a>
-    <nav class="nav-links" aria-label="Section navigation">
-      <a href="#screenshots">Screenshots</a>
-      <a href="#features">Features</a>
-      <a href="#faq">FAQ</a>
-      <a href="#support">Support</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-    <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle dark mode">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-    </button>
-  </div>
-</header>
-
-<main id="top">
-
-  <!-- ============================= HEADER / HERO ============================= -->
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <img class="app-icon" src="Branding/icon-1024x1024.png" alt="Onus app icon">
-      <h1>Onus</h1>
-      <p class="tagline">A straightforward workout tracker for iPhone and Apple Watch — build programs, log sets in real time, and watch your progress and personal records add up.</p>
-      <div class="hero-badges">
-        <span class="pill">No account required</span>
-        <span class="pill">No ads</span>
-        <span class="pill">Your data stays on your device</span>
-        <span class="pill">Standalone Apple Watch app</span>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("onus-theme");
+          if (stored === "light" || stored === "dark") {
+            document.documentElement.setAttribute("data-theme", stored);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="nav-brand" href="#top">
+          <img src="Branding/icon-256x256.png" alt="" />
+          <span>Onus</span>
+        </a>
+        <nav class="nav-links" aria-label="Section navigation">
+          <a href="#screenshots">Screenshots</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="#support">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <button
+          class="theme-toggle"
+          data-theme-toggle
+          type="button"
+          aria-label="Toggle dark mode"
+        >
+          <svg
+            class="icon-moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+          </svg>
+          <svg
+            class="icon-sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+            />
+          </svg>
+        </button>
       </div>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://apps.apple.com/us/app/onus-strength/id6804785346">Download on the App Store</a>
-        <a class="btn btn-ghost" href="#faq">Get Help</a>
-      </div>
-      <div class="hero-banner">
-        <img src="Branding/BannerLogo.png" alt="Onus logo banner">
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ============================= SCREENSHOTS ============================= -->
-  <section id="screenshots">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Take a look</span>
-        <h2>Screenshots</h2>
-        <p>Onus on iPhone, in both Light and Dark mode, and the standalone Apple Watch app. Tap any screenshot to zoom in.</p>
-      </div>
-
-      <div class="shot-group">
-        <div class="shot-group-head">
-          <h3>iPhone</h3>
-          <div class="tabbar" role="tablist" aria-label="iPhone appearance">
-            <button type="button" class="is-active" data-ios-tab="Dark" role="tab" aria-selected="true">Dark</button>
-            <button type="button" data-ios-tab="Light" role="tab" aria-selected="false">Light</button>
+    <main id="top">
+      <!-- ============================= HEADER / HERO ============================= -->
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <img
+            class="app-icon"
+            src="Branding/icon-1024x1024.png"
+            alt="Onus app icon"
+          />
+          <h1>Onus</h1>
+          <p class="tagline">
+            A straightforward workout tracker for iPhone and Apple Watch — build
+            programs, log sets in real time, and watch your progress and
+            personal records add up.
+          </p>
+          <div class="hero-badges">
+            <span class="pill">No account required</span>
+            <span class="pill">No ads</span>
+            <span class="pill">Your data stays on your device</span>
+            <span class="pill">Standalone Apple Watch app</span>
+          </div>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://apps.apple.com/us/app/onus-strength/id6804785346"
+              >Download on the App Store</a
+            >
+            <a class="btn btn-ghost" href="#faq">Get Help</a>
+          </div>
+          <div class="hero-banner">
+            <img src="Branding/BannerLogo.png" alt="Onus logo banner" />
           </div>
         </div>
-        <div class="gallery" data-ios-gallery aria-live="polite"></div>
-      </div>
+      </section>
 
-      <div class="shot-group">
-        <div class="shot-group-head">
-          <h3>Apple Watch</h3>
-          <span class="platform-note">Onus runs as a standalone watchOS app</span>
-        </div>
-        <div class="gallery" data-watch-gallery></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================= FEATURES ============================= -->
-  <section id="features">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">What it does</span>
-        <h2>Features</h2>
-        <p>Everything below is built into Onus — no add-ons, no in-app unlocks required to use them.</p>
-      </div>
-
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🔒</div>
-          <h3>Private by design</h3>
-          <p>No sign-up and no account. Open the app and start logging — your data lives on your device and, optionally, your own private iCloud.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🗂️</div>
-          <h3>Programs &amp; workouts</h3>
-          <p>Group related workouts into programs (like a Push/Pull/Legs split), mark one Current to feature it on Home, and edit every detail freely.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Quick-start anywhere</h3>
-          <p>Launch any Active workout pre-filled with its planned exercises and targets, right from Home on iPhone or directly from your Apple Watch.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⌨️</div>
-          <h3>Built for real-time logging</h3>
-          <p>A custom numeric keypad, your previous weight and reps shown inline, and a one-tap Complete checkmark for every set.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔁</div>
-          <h3>Supersets &amp; circuits</h3>
-          <p>Group two or more exercises to perform back-to-back, with per-group rest settings and round tracking built in.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⏱️</div>
-          <h3>Automatic rest timer</h3>
-          <p>Starts the moment you complete a set, keeps counting in the background, and alerts you with sound when it's done.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🏆</div>
-          <h3>Personal records</h3>
-          <p>Onus detects new PRs automatically, celebrates them with a trophy animation, and highlights them everywhere they appear.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📚</div>
-          <h3>Exercise library</h3>
-          <p>A full built-in catalog filterable by muscle group and equipment, plus your own custom exercises and in-app form-video lookups.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📅</div>
-          <h3>History &amp; weekly summary</h3>
-          <p>Every completed session logged in detail, with a weekly rollup of workouts, volume, and average duration.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📈</div>
-          <h3>Progress graphs</h3>
-          <p>Track 1RM estimate, top set, volume, or max reps over time for any exercise, with PR points called out on the chart.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⌚</div>
-          <h3>Standalone Apple Watch app</h3>
-          <p>Start, log, and finish an entire workout from your wrist — no iPhone nearby required — plus Now Playing controls and a complication.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚙️</div>
-          <h3>Tuned to how you train</h3>
-          <p>Pounds or kilograms, per-muscle-group weight increments, and configurable rest timer defaults and previous-set behavior.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">☁️</div>
-          <h3>Export, import &amp; iCloud backup</h3>
-          <p>Export history as CSV, share programs as JSON, and let Onus back itself up automatically to your own private iCloud.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">❤️</div>
-          <h3>Apple Health integration</h3>
-          <p>Reads heart rate and active energy to enrich your summaries, and writes Watch workouts back to Health automatically.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================= FAQ ============================= -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Questions</span>
-        <h2>Frequently asked questions</h2>
-        <p>Can't find what you're looking for? <a href="#support">Contact support</a>.</p>
-      </div>
-
-      <div class="faq-list">
-
-        <details class="faq-item">
-          <summary>Do I need to create an account to use Onus?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body"><p>No. There's no sign-up and no account — open the app and start logging your first workout right away.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Is Onus free, or does it have in-app purchases?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body">
-            <p>Onus includes a 14-day free trial. After the trial ends, a one-time in-app purchase of $19.99 USD unlocks the full app permanently — no subscription and no recurring charges.</p>
-            <p>Since Onus doesn't use an account, your purchase is tied to your Apple ID. Reinstalling the app or moving to a new device while signed into that same Apple ID should restore it automatically.<span class="todo-flag">TODO</span></p>
-            <p><em>TODO: confirm the exact in-app step for restoring a purchase (e.g. a "Restore Purchase" button in Settings) and add it here if automatic restore doesn't cover every case.</em></p>
+      <!-- ============================= SCREENSHOTS ============================= -->
+      <section id="screenshots">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Take a look</span>
+            <h2>Screenshots</h2>
+            <p>
+              Onus on iPhone, in both Light and Dark mode, and the standalone
+              Apple Watch app. Tap any screenshot to zoom in.
+            </p>
           </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>How do I back up my data or move it to a new iPhone?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body">
-            <p>Onus automatically saves a private backup of your programs, workouts, and history to your own iCloud Drive after workouts and while the app is running. You can also trigger a manual backup or restore from <strong>Settings → Import/Export Data → iCloud Backup</strong>. Restoring only adds data — it never deletes anything already on your device.</p>
-            <p>You can also export your workout history as a CSV, or export programs and workouts as a JSON file to share or re-import elsewhere, from the same Settings screen.</p>
+          <div class="shot-group">
+            <div class="shot-group-head">
+              <h3>iPhone</h3>
+              <div class="tabbar" role="tablist" aria-label="iPhone appearance">
+                <button
+                  type="button"
+                  class="is-active"
+                  data-ios-tab="Dark"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  Dark
+                </button>
+                <button
+                  type="button"
+                  data-ios-tab="Light"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Light
+                </button>
+              </div>
+            </div>
+            <div class="gallery" data-ios-gallery aria-live="polite"></div>
           </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>How do I delete my data?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body"><p>Since Onus doesn't use an account or a server, deleting the app deletes your data with it — unless you have an Onus iCloud backup or an iOS-level iCloud device backup enabled. To remove an Onus iCloud backup specifically, go to <strong>Settings → [your name] → iCloud → Apps Using iCloud</strong> on your iPhone.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Why don't I see a program on Home or on my Apple Watch?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body"><p>Only programs marked <strong>Active</strong> in the Workouts tab show up on Home or sync to your Apple Watch. Open the program in the Workouts tab and mark it Active to make it available to quick-start.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Can I use Onus without an Apple Watch?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body"><p>Yes. The Apple Watch app is optional — everything can be logged from iPhone alone. Note that workouts logged from iPhone without the Watch aren't written to Apple Health; only Watch-tracked workouts are.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Why is my calorie count labeled "Estimated"?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body"><p>When your Apple Watch doesn't supply a measured calorie value, Onus estimates it using your body mass from Apple Health. This is clearly labeled "Estimated" wherever it appears. You can review or revoke Onus's Health access anytime in <strong>Settings → Privacy &amp; Security → Health → Onus</strong>.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Where do the exercise form-video links go?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body"><p>The Exercise Library's lookup menu opens an in-app browser to YouTube, muscleandstrength.com, musclewiki.com, or the free-exercise-db project, depending on which you choose. These are third-party sites subject to their own privacy policies — see our <a href="privacy.html">Privacy Policy</a> for details.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>The app isn't working as expected — what should I try?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <div class="faq-body"><p>Make sure you're on the latest version of Onus and iOS/watchOS, then try force-quitting and reopening the app. If you're using the Watch app, confirm it's paired and reachable in the Watch app on iPhone. If the problem persists, <a href="#support">reach out to support</a> with a description of what happened.</p></div>
-        </details>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================= SUPPORT / CONTACT ============================= -->
-  <section id="support">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">We're here to help</span>
-        <h2>Support</h2>
-      </div>
-
-      <div class="contact-card">
-        <div>
-          <h3>Have a question, found a bug, or want to request a feature?</h3>
-          <p>Email us and we'll get back to you as soon as we can.</p>
+          <div class="shot-group">
+            <div class="shot-group-head">
+              <h3>Apple Watch</h3>
+              <span class="platform-note"
+                >Onus runs as a standalone watchOS app</span
+              >
+            </div>
+            <div class="gallery" data-watch-gallery></div>
+          </div>
         </div>
-        <a class="btn btn-primary" href="mailto:onus.support@gmail.com">onus.support@gmail.com</a>
-      </div>
-      <p class="contact-note">We typically respond within a few business days.</p>
-    </div>
-  </section>
+      </section>
 
-  <!-- ============================= PRIVACY ============================= -->
-  <section id="privacy">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Your data</span>
-        <h2>Privacy Policy</h2>
-        <p>The short version: Onus doesn't collect, transmit, or sell any of your data. Read the full policy for details on iCloud backup, HealthKit, and third-party links.</p>
-      </div>
+      <!-- ============================= FEATURES ============================= -->
+      <section id="features">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">What it does</span>
+            <h2>Features</h2>
+            <p>
+              Everything below is built into Onus — no add-ons, no in-app
+              unlocks required to use them.
+            </p>
+          </div>
 
-      <div class="privacy-card">
-        <ul>
-          <li>No analytics, ads, or third-party tracking of any kind</li>
-          <li>All workout data stored locally on your device</li>
-          <li>iCloud backups go only to your own private iCloud account</li>
-          <li>Health data never leaves Apple's HealthKit ecosystem</li>
-        </ul>
-        <a class="btn btn-ghost" href="privacy.html">Read the full Privacy Policy →</a>
-      </div>
-    </div>
-  </section>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔒</div>
+              <h3>Private by design</h3>
+              <p>
+                No sign-up and no account. Open the app and start logging — your
+                data lives on your device and, optionally, your own private
+                iCloud.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🗂️</div>
+              <h3>Programs &amp; workouts</h3>
+              <p>
+                Group related workouts into programs (like a Push/Pull/Legs
+                split), mark one Current to feature it on Home, and edit every
+                detail freely.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <h3>Quick-start anywhere</h3>
+              <p>
+                Launch any Active workout pre-filled with its planned exercises
+                and targets, right from Home on iPhone or directly from your
+                Apple Watch.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⌨️</div>
+              <h3>Built for real-time logging</h3>
+              <p>
+                A custom numeric keypad, your previous weight and reps shown
+                inline, and a one-tap Complete checkmark for every set.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔁</div>
+              <h3>Supersets &amp; circuits</h3>
+              <p>
+                Group two or more exercises to perform back-to-back, with
+                per-group rest settings and round tracking built in.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⏱️</div>
+              <h3>Automatic rest timer</h3>
+              <p>
+                Starts the moment you complete a set, keeps counting in the
+                background, and alerts you with sound when it's done.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🏆</div>
+              <h3>Personal records</h3>
+              <p>
+                Onus detects new PRs automatically, celebrates them with a
+                trophy animation, and highlights them everywhere they appear.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📚</div>
+              <h3>Exercise library</h3>
+              <p>
+                A full built-in catalog filterable by muscle group and
+                equipment, plus your own custom exercises and in-app form-video
+                lookups.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📅</div>
+              <h3>History &amp; weekly summary</h3>
+              <p>
+                Every completed session logged in detail, with a weekly rollup
+                of workouts, volume, and average duration.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📈</div>
+              <h3>Progress graphs</h3>
+              <p>
+                Track 1RM estimate, top set, volume, or max reps over time for
+                any exercise, with PR points called out on the chart.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⌚</div>
+              <h3>Standalone Apple Watch app</h3>
+              <p>
+                Start, log, and finish an entire workout from your wrist — no
+                iPhone nearby required — plus Now Playing controls and a
+                complication.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⚙️</div>
+              <h3>Tuned to how you train</h3>
+              <p>
+                Pounds or kilograms, per-muscle-group weight increments, and
+                configurable rest timer defaults and previous-set behavior.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">☁️</div>
+              <h3>Export, import &amp; iCloud backup</h3>
+              <p>
+                Export history as CSV, share programs as JSON, and let Onus back
+                itself up automatically to your own private iCloud.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">❤️</div>
+              <h3>Apple Health integration</h3>
+              <p>
+                Reads heart rate and active energy to enrich your summaries, and
+                writes Watch workouts back to Health automatically.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</main>
+      <!-- ============================= FAQ ============================= -->
+      <section id="faq">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Questions</span>
+            <h2>Frequently asked questions</h2>
+            <p>
+              Can't find what you're looking for?
+              <a href="#support">Contact support</a>.
+            </p>
+          </div>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-inner">
-      <a class="footer-brand" href="#top">
-        <img src="Branding/icon-256x256.png" alt="">
-        <span>Onus</span>
-      </a>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="https://apps.apple.com/us/app/onus-strength/id6804785346">App Store</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="mailto:onus.support@gmail.com">Contact</a>
-        <!-- TODO: no social accounts provided yet — add links here when available, e.g.:
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                Do I need to create an account to use Onus?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  No. There's no sign-up and no account — open the app and start
+                  logging your first workout right away.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Is Onus free, or does it have in-app purchases?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  Onus includes a 14-day free trial. After the trial ends, a
+                  one-time in-app purchase of $19.99 USD unlocks the full app
+                  permanently — no subscription and no recurring charges.
+                </p>
+                <p>
+                  Since Onus doesn't use an account, your purchase is tied to
+                  your Apple ID. Reinstalling the app or moving to a new device
+                  while signed into that same Apple ID should restore it
+                  automatically.<span class="todo-flag">TODO</span>
+                </p>
+                <p>
+                  <em
+                    >TODO: confirm the exact in-app step for restoring a
+                    purchase (e.g. a "Restore Purchase" button in Settings) and
+                    add it here if automatic restore doesn't cover every
+                    case.</em
+                  >
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                How do I back up my data or move it to a new iPhone?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  Onus automatically saves a private backup of your programs,
+                  workouts, and history to your own iCloud Drive after workouts
+                  and while the app is running. You can also trigger a manual
+                  backup or restore from
+                  <strong>Settings → Import/Export Data → iCloud Backup</strong
+                  >. Restoring only adds data — it never deletes anything
+                  already on your device.
+                </p>
+                <p>
+                  You can also export your workout history as a CSV, or export
+                  programs and workouts as a JSON file to share or re-import
+                  elsewhere, from the same Settings screen.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                How do I delete my data?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  Since Onus doesn't use an account or a server, deleting the
+                  app deletes your data with it — unless you have an Onus iCloud
+                  backup or an iOS-level iCloud device backup enabled. To remove
+                  an Onus iCloud backup specifically, go to
+                  <strong
+                    >Settings → [your name] → iCloud → Apps Using iCloud</strong
+                  >
+                  on your iPhone.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Why don't I see a program on Home or on my Apple Watch?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  Only programs marked <strong>Active</strong> in the Workouts
+                  tab show up on Home or sync to your Apple Watch. Open the
+                  program in the Workouts tab and mark it Active to make it
+                  available to quick-start.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Can I use Onus without an Apple Watch?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  Yes. The Apple Watch app is optional — everything can be
+                  logged from iPhone alone, and every completed workout is
+                  written to Apple Health either way. The only difference is
+                  calories: a Watch-tracked workout gets a measured
+                  active-energy reading, while an iPhone-only workout gets an
+                  estimate based on your logged sets and body weight (labeled
+                  "Estimated" wherever it appears).
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Why is my calorie count labeled "Estimated"?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  When your Apple Watch doesn't supply a measured calorie value,
+                  Onus estimates it using your body mass from Apple Health. This
+                  is clearly labeled "Estimated" wherever it appears. You can
+                  review or revoke Onus's Health access anytime in
+                  <strong
+                    >Settings → Privacy &amp; Security → Health → Onus</strong
+                  >.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Where do the exercise form-video links go?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  The Exercise Library's lookup menu opens an in-app browser to
+                  YouTube, muscleandstrength.com, musclewiki.com, or the
+                  free-exercise-db project, depending on which you choose. These
+                  are third-party sites subject to their own privacy policies —
+                  see our <a href="privacy.html">Privacy Policy</a> for details.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                The app isn't working as expected — what should I try?<svg
+                  class="chev"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div class="faq-body">
+                <p>
+                  Make sure you're on the latest version of Onus and
+                  iOS/watchOS, then try force-quitting and reopening the app. If
+                  you're using the Watch app, confirm it's paired and reachable
+                  in the Watch app on iPhone. If the problem persists,
+                  <a href="#support">reach out to support</a> with a description
+                  of what happened.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= SUPPORT / CONTACT ============================= -->
+      <section id="support">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">We're here to help</span>
+            <h2>Support</h2>
+          </div>
+
+          <div class="contact-card">
+            <div>
+              <h3>
+                Have a question, found a bug, or want to request a feature?
+              </h3>
+              <p>Email us and we'll get back to you as soon as we can.</p>
+            </div>
+            <a class="btn btn-primary" href="mailto:onus.support@gmail.com"
+              >onus.support@gmail.com</a
+            >
+          </div>
+          <p class="contact-note">
+            We typically respond within a few business days.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============================= PRIVACY ============================= -->
+      <section id="privacy">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Your data</span>
+            <h2>Privacy Policy</h2>
+            <p>
+              The short version: Onus doesn't collect, transmit, or sell any of
+              your data. Read the full policy for details on iCloud backup,
+              HealthKit, and third-party links.
+            </p>
+          </div>
+
+          <div class="privacy-card">
+            <ul>
+              <li>No analytics, ads, or third-party tracking of any kind</li>
+              <li>All workout data stored locally on your device</li>
+              <li>iCloud backups go only to your own private iCloud account</li>
+              <li>Health data never leaves Apple's HealthKit ecosystem</li>
+            </ul>
+            <a class="btn btn-ghost" href="privacy.html"
+              >Read the full Privacy Policy →</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <a class="footer-brand" href="#top">
+            <img src="Branding/icon-256x256.png" alt="" />
+            <span>Onus</span>
+          </a>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="https://apps.apple.com/us/app/onus-strength/id6804785346"
+              >App Store</a
+            >
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:onus.support@gmail.com">Contact</a>
+            <!-- TODO: no social accounts provided yet — add links here when available, e.g.:
         <a href="#">X / Twitter</a>
         <a href="#">Instagram</a>
         -->
-      </nav>
-    </div>
-    <div class="footer-meta">
-      <span>© 2026 Onus. All rights reserved.</span>
-      <span>Made for iPhone &amp; Apple Watch.</span>
-    </div>
-  </div>
-</footer>
+          </nav>
+        </div>
+        <div class="footer-meta">
+          <span>© 2026 Onus. All rights reserved.</span>
+          <span>Made for iPhone &amp; Apple Watch.</span>
+        </div>
+      </div>
+    </footer>
 
-<div class="lightbox" data-lightbox>
-  <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close">×</button>
-  <img src="" alt="">
-</div>
+    <div class="lightbox" data-lightbox>
+      <button
+        class="lightbox-close"
+        type="button"
+        data-lightbox-close
+        aria-label="Close"
+      >
+        ×
+      </button>
+      <img src="" alt="" />
+    </div>
 
-<script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
