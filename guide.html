@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Guide — Onus</title>
+    <meta
+      name="description"
+      content="A complete guide to using Onus, a private workout tracker for iPhone and Apple Watch."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Branding/icon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Branding/icon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Branding/icon-256x256.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("onus-theme");
+          if (stored === "light" || stored === "dark") {
+            document.documentElement.setAttribute("data-theme", stored);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="nav-brand" href="index.html">
+          <img src="Branding/icon-256x256.png" alt="" />
+          <span>Onus</span>
+        </a>
+        <nav class="nav-links" aria-label="Section navigation">
+          <a href="index.html#screenshots">Screenshots</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#support">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <button
+          class="theme-toggle"
+          data-theme-toggle
+          type="button"
+          aria-label="Toggle dark mode"
+        >
+          <svg
+            class="icon-moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+          </svg>
+          <svg
+            class="icon-sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <article class="doc wrap">
+        <a class="back-link" href="index.html">← Back to Onus support</a>
+
+        <h1>Onus User Guide</h1>
+        <p>
+          Onus is a straightforward workout tracker for iPhone and Apple
+          Watch: build programs, log sets in real time, and see your progress
+          and personal records over time — with no account, no ads, and no
+          data leaving your device (except to your own private iCloud, if you
+          choose to back up). This guide walks through the app's main
+          features.
+        </p>
+
+        <ul>
+          <li><a href="#getting-started">Getting Started</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#starting-a-workout">Starting a Workout</a></li>
+          <li><a href="#logging-a-workout">Logging a Workout</a></li>
+          <li><a href="#supersets-circuits">Supersets &amp; Circuits</a></li>
+          <li><a href="#rest-timer">Rest Timer</a></li>
+          <li><a href="#personal-records">Personal Records</a></li>
+          <li><a href="#workouts-programs">Workouts &amp; Programs</a></li>
+          <li><a href="#exercise-library">Exercise Library</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#progress-graphs">Progress Graphs</a></li>
+          <li><a href="#apple-watch-app">Apple Watch App</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li>
+            <a href="#data-export-import"
+              >Data Export, Import &amp; iCloud Backup</a
+            >
+          </li>
+          <li><a href="#health-integration">Apple Health Integration</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+
+        <h2 id="getting-started">Getting Started</h2>
+        <p>
+          Onus has no sign-up and no account — open the app and start
+          logging. The first time you launch it, you'll be asked to pick one
+          of the built-in preloaded programs to start as your Current program
+          (you can change or ignore this later); after that there's nothing
+          to configure before your first workout. Your data lives on your
+          device (and syncs to your paired Apple Watch).
+        </p>
+        <p>
+          The app is organized into four tabs:
+          <strong>Home</strong>, <strong>History</strong>,
+          <strong>Workouts</strong>, and <strong>Settings</strong>. The
+          exercise library lives inside Settings rather than its own tab (see
+          <a href="#exercise-library">Exercise Library</a>).
+        </p>
+
+        <h2 id="home">Home</h2>
+        <p>Home is your launch pad. From here you can:</p>
+        <ul>
+          <li>
+            See your <strong>Current Program</strong> front and center, with
+            its workouts listed underneath — tap any workout to quick-start
+            it pre-filled with its planned exercises and sets.
+          </li>
+          <li>
+            See any other <strong>Active Programs</strong> you're running,
+            collapsed below the current one, so you can switch between
+            multiple programs (e.g. alternating a strength block with a
+            conditioning block) without losing track of either.
+          </li>
+        </ul>
+
+        <h2 id="starting-a-workout">Starting a Workout</h2>
+        <p>There are two ways to start a session:</p>
+        <ul>
+          <li>
+            <strong>From your iPhone</strong> — quick-start any workout
+            listed on Home, pre-loaded with its planned exercises, sets,
+            reps, and target weights. Only programs marked
+            <strong>Active</strong> in the Workouts tab show up on Home, so
+            mark a program Active there first to make its workouts available
+            to quick-start. (The Workouts tab itself is for building and
+            editing programs/workouts, not starting them — quick-start
+            happens from Home.)
+          </li>
+          <li>
+            <strong>From your Apple Watch</strong> — start a workout directly
+            on the Watch, even without your iPhone nearby. Only programs
+            marked <strong>Active</strong> on iPhone are synced to the Watch,
+            so the same Active programs available to quick-start on Home are
+            what you'll see there (see
+            <a href="#apple-watch-app">Apple Watch App</a>).
+          </li>
+        </ul>
+
+        <h2 id="logging-a-workout">Logging a Workout</h2>
+        <p>
+          The active workout screen lists each exercise as an expandable
+          card. For each set you log:
+        </p>
+        <ul>
+          <li>
+            <strong>Weight</strong> and <strong>Reps</strong>, entered on a
+            custom numeric keypad — big digit keys, a decimal point (only
+            where relevant, e.g. disabled for reps), and a dedicated
+            +/- stepper sized per muscle group (see
+            <a href="#settings">Settings</a>) so you can nudge a value
+            without touching the keyboard. A <strong>Next</strong> button
+            jumps you straight to the following field.
+          </li>
+          <li>
+            <strong>Previous</strong> — the weight and reps you logged for
+            that exact set last time, shown right next to the input so
+            progressive overload is a glance away.
+          </li>
+          <li>
+            A <strong>Complete</strong> checkmark per set — tap it to log the
+            set (and trigger the rest timer). Completing every set in an
+            exercise automatically collapses it and expands the next one (for
+            a superset or circuit, every exercise in the group has to be
+            finished first — see below).
+          </li>
+        </ul>
+        <p>
+          You can add or remove exercises and sets mid-workout, and a running
+          <strong>elapsed time</strong> is always visible in the toolbar.
+          When you're done, <strong>Finish Workout</strong> saves it to your
+          history; <strong>Discard Workout</strong> throws it away.
+        </p>
+        <p>
+          If a workout was started from a template and you changed the plan
+          on the fly (added/removed an exercise or set, changed a target),
+          Onus shows a <strong>Template Changes</strong> review after you
+          finish, listing what changed by exercise so you can accept the
+          changes into the template or reject them and keep the template
+          as-is.
+        </p>
+
+        <h2 id="supersets-circuits">Supersets &amp; Circuits</h2>
+        <p>
+          Group two or more exercises to perform back-to-back, round by
+          round. Group exactly two exercises and Onus calls it a
+          <strong>Superset</strong>; group three or more and it's a
+          <strong>Circuit</strong> — the same feature, just a different
+          label. To create one, multi-select exercises in a workout or
+          template and tap <strong>Group as Superset/Circuit</strong>.
+        </p>
+        <p>
+          Each group has its own name and settings: how many sets make up a
+          round, rest between exercises within a round (for circuits of 3+),
+          and rest after a full round before starting the next one. During a
+          workout, the group's card shows every member and only advances once
+          <strong>all</strong> of them have completed the current round — not
+          just the first one you finish.
+        </p>
+
+        <h2 id="rest-timer">Rest Timer</h2>
+        <p>
+          Completing a working set automatically starts a rest timer with a
+          progress-filled bar. You can adjust the remaining time in either
+          direction or skip it outright, and it keeps counting even if you
+          background the app, alerting you with your chosen sound when it
+          ends.
+        </p>
+
+        <h2 id="personal-records">Personal Records</h2>
+        <p>
+          Onus automatically detects when a completed set is a new personal
+          record for that exercise and celebrates it with an on-screen
+          trophy animation. PR sets are marked with a trophy badge everywhere
+          they appear — the active workout, workout summaries, history, and
+          <a href="#progress-graphs">Progress Graphs</a> (where PR points are
+          drawn larger and in a distinct color) — so your best lifts are
+          always easy to spot.
+        </p>
+
+        <h2 id="workouts-programs">Workouts &amp; Programs</h2>
+        <p>The <strong>Workouts</strong> tab has two sub-tabs:</p>
+        <ul>
+          <li>
+            <strong>Programs</strong> — a program groups related workouts
+            together (e.g. a Push/Pull/Legs split or an Upper/Lower split).
+            Mark a program <strong>Active</strong> to make it available to
+            quick-start, and mark one <strong>Current</strong> to feature it
+            on Home. Onus ships with several preloaded programs; you can
+            choose which ones appear in your library from
+            <strong>Settings → Programs → Preloaded Programs</strong>.
+          </li>
+          <li>
+            <strong>Workouts</strong> — individual workout templates (e.g.
+            "Push Day"), each a list of exercises with planned sets, target
+            reps, target weight, and a rest timer duration per exercise.
+            Workouts can belong to one or more programs, or stand alone.
+          </li>
+        </ul>
+        <p>
+          Both programs and workouts are fully editable — reorder exercises
+          and sets, group exercises into supersets/circuits, adjust targets,
+          or delete what you no longer need.
+        </p>
+
+        <h2 id="exercise-library">Exercise Library</h2>
+        <p>
+          Browse the full built-in exercise catalog from
+          <strong>Settings → Exercises → Exercise Library</strong>,
+          filterable by muscle group, equipment type, and search text. Each
+          exercise entry shows its primary and secondary muscles and
+          equipment, and has a lookup menu for form instructions via
+          YouTube, muscleandstrength.com, musclewiki.com, or the
+          free-exercise-db project — opened in an in-app browser so you never
+          leave Onus.
+        </p>
+        <p>
+          You can also add your own <strong>custom exercises</strong> with a
+          name, muscle group, and equipment type — useful for movements not
+          in the built-in catalog or gym equipment that's a little different
+          from the standard. When adding exercises to a workout, you can
+          multi-select several at once instead of adding them one at a time.
+        </p>
+
+        <h2 id="history">History</h2>
+        <p>Every completed workout is logged with:</p>
+        <ul>
+          <li>
+            A <strong>weekly summary</strong> — workouts completed, total
+            volume, and average duration for the current week.
+          </li>
+          <li>A chronologically grouped list of past sessions.</li>
+          <li>
+            A <strong>detail view</strong> per session: duration, total
+            volume, exercise count, and (if you use the Watch) average heart
+            rate and calories burned, followed by a full set-by-set
+            breakdown with PR badges.
+          </li>
+        </ul>
+        <p>
+          History has a <strong>Progress</strong> sub-view alongside the
+          chronological list — see <a href="#progress-graphs">Progress
+          Graphs</a> below. You can also set a <strong>Start Date</strong> in
+          Settings to limit how far back both views look.
+        </p>
+
+        <h2 id="progress-graphs">Progress Graphs</h2>
+        <p>
+          Track how an exercise is trending over time as a line chart, from
+          <strong>History → Progress</strong>. Tap <strong>Add Graph</strong>
+          to pick any exercise — from a program, a specific workout, or your
+          other logged exercises — and Onus plots it going forward.
+        </p>
+        <p>
+          Each graph can show <strong>1RM Estimate</strong>,
+          <strong>Top Set</strong>, <strong>Volume</strong>, or
+          <strong>Max Reps</strong>, over the last
+          <strong>30, 60, or 90 days</strong> or <strong>All Time</strong>,
+          with an optional trend line. PR sets stand out as larger,
+          highlighted points. Use <strong>Filter Graphs</strong> to narrow
+          which graphs are shown and <strong>Manage Graphs</strong> to
+          bulk-edit or delete them. If you'd rather not manage graphs by
+          hand, turn on <strong>Only Show Current Program</strong> in
+          Settings and Onus keeps your graphs in sync with your Current
+          program's exercises automatically.
+        </p>
+
+        <h2 id="apple-watch-app">Apple Watch App</h2>
+        <p>
+          Onus runs as a standalone Apple Watch app — workouts can be
+          started, logged, and finished entirely from the wrist, even
+          without the iPhone nearby.
+        </p>
+        <ul>
+          <li>
+            <strong>Home</strong> on the Watch mirrors your active programs
+            and workouts from the phone, so you can quick-start the same way
+            you would on iPhone.
+          </li>
+          <li>
+            <strong>Active workout</strong> shows the current exercise, a
+            segmented progress bar for the exercise's sets (and your position
+            within a superset or circuit), and simple +/- adjusters for reps
+            and weight — plus live heart rate and calories from a connected
+            HealthKit workout session.
+          </li>
+          <li>
+            Swipe over to the <strong>Now Playing</strong> screen to control
+            music without leaving the workout.
+          </li>
+          <li>
+            A <strong>summary</strong> screen lists every exercise and set
+            for the in-progress workout, lets you add or remove sets, and
+            jump directly to any set. It flags whether you finished every set
+            or left some incomplete, and if you tap
+            <strong>Finish Workout</strong> with sets still open, Onus
+            double-checks that you meant to before wrapping up.
+          </li>
+          <li>
+            Finished (or discarded) workouts sync back to iPhone
+            automatically via WatchConnectivity — no internet connection
+            involved, just a direct device-to-device link — and, just like on
+            iPhone, you'll get a chance to review and accept any changes back
+            into the template.
+          </li>
+          <li>
+            A watch face complication gives you a one-tap shortcut straight
+            into Onus.
+          </li>
+        </ul>
+
+        <h2 id="settings">Settings</h2>
+        <p>Onus is tuned to how you train:</p>
+        <ul>
+          <li><strong>Appearance</strong> — light, dark, or system.</li>
+          <li>
+            <strong>Exercises</strong> — default source for the exercise
+            library's form-lookup shortcut (YouTube, etc.), and access to the
+            <a href="#exercise-library">Exercise Library</a>.
+          </li>
+          <li>
+            <strong>Rest Timer</strong> — default duration, adjustment step
+            size, and completion sound.
+          </li>
+          <li>
+            <strong>Previous Set</strong> — show your last performance for
+            the <em>same workout</em> only, or for <em>any workout</em> that
+            used the same exercise.
+          </li>
+          <li>
+            <strong>Weight</strong> — pounds or kilograms (switching doesn't
+            touch your stored data, only how it's displayed), and whether
+            dumbbell sets log the weight of <em>one</em> dumbbell (Onus
+            doubles it for volume) or the <em>combined</em> weight of both.
+          </li>
+          <li>
+            <strong>Weight Increment</strong> — separate +/- step sizes for
+            lower body, upper body, and isolation movements, so the
+            quick-adjust buttons match how you actually load a bar or pick a
+            dumbbell.
+          </li>
+          <li>
+            <strong>Programs</strong> — choose which preloaded programs
+            appear in your library.
+          </li>
+          <li>
+            <strong>History</strong> — a Start Date cutoff for History and
+            Progress, plus default metric, date range, and trend-line
+            settings for new <a href="#progress-graphs">Progress Graphs</a>.
+          </li>
+          <li><strong>Import/Export Data</strong> — see below.</li>
+        </ul>
+
+        <h2 id="data-export-import">
+          Data Export, Import &amp; iCloud Backup
+        </h2>
+        <p>From Settings you can:</p>
+        <ul>
+          <li>
+            <strong>Export Workout History</strong> as a CSV — every
+            completed set across every session, ready for a spreadsheet.
+          </li>
+          <li>
+            <strong>Export Programs &amp; Workouts</strong> as a JSON file
+            you can share (e.g. AirDrop it to a friend or training partner)
+            so they can preview and selectively import your programs and
+            workout templates.
+          </li>
+          <li>
+            <strong>Import Programs &amp; Workouts</strong> from a file
+            someone shared with you the same way — you'll see a preview
+            before anything is added.
+          </li>
+          <li>
+            <strong>iCloud Backup</strong> — Onus automatically saves a
+            private snapshot of all your data (programs, workouts, and
+            history) to your own iCloud Drive after workouts and when you
+            leave the app, so it can be recovered if you lose or replace
+            your device. You can also back up or restore manually; restoring
+            only adds data and never deletes anything already on your
+            device. See the <a href="privacy.html">Privacy Policy</a> for
+            details on what this backup contains and where it goes.
+          </li>
+        </ul>
+
+        <h2 id="health-integration">Apple Health Integration</h2>
+        <p>
+          With permission, Onus reads heart rate, active energy burned, and
+          body mass (the last only to estimate calories when the Watch
+          doesn't supply a measured value) to enrich your workout summaries.
+          Workouts tracked with the Apple Watch are also written back to
+          Apple Health so they show up alongside your other activity;
+          workouts logged from iPhone alone (without the Watch) aren't
+          written to Health. This is all handled by Apple's HealthKit
+          framework directly on your device — see the
+          <a href="privacy.html">Privacy Policy</a> for details.
+        </p>
+
+        <h2 id="privacy">Privacy</h2>
+        <p>
+          Onus doesn't collect, transmit, or sell any of your data — full
+          details are in the <a href="privacy.html">Privacy Policy</a>.
+        </p>
+
+        <h2 id="support">Support</h2>
+        <p>
+          Have a question, found a bug, or want to request a feature?
+          <a href="mailto:onus.support@gmail.com">onus.support@gmail.com</a>
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html">
+            <img src="Branding/icon-256x256.png" alt="" />
+            <span>Onus</span>
+          </a>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="https://apps.apple.com/us/app/onus-strength/id6804785346"
+              >App Store</a
+            >
+            <a href="guide.html">User Guide</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:onus.support@gmail.com">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-meta">
+          <span>© 2026 Onus. All rights reserved.</span>
+          <span>Made for iPhone &amp; Apple Watch.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
