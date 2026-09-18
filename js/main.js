@@ -51,6 +51,7 @@
     "21_session_summary",
     "22_session_summary_template_changes",
     "23_progress_full",
+    "24_paywall",
   ];
 
   var watchShots = [
