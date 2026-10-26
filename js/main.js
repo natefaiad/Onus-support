@@ -42,10 +42,14 @@
     "12_workout_editor_configure",
     "13_settings_top",
     "14_settings_bottom",
-    "15_active_session",
-    "16_active_session_rest_timer",
-    "17_active_session_personal_record",
-    "18_active_session_completed",
+    "15_active_session_(standard)",
+    "15_active_session_(circuit)",
+    "16_active_session_(standard)_rest_timer",
+    "16_active_session_(circuit)_active_set",
+    "16_active_session_(circuit)_rest_timer",
+    "17_active_session_(standard)_personal_record",
+    "18_active_session_(standard)_completed",
+    "18_active_session_(circuit)_completed",
     "19_active_session_finish_workout",
     "20_history_full",
     "21_session_summary",
@@ -58,15 +62,28 @@
     { file: "01_home_no_active_programs", label: "Home (No Active Programs)" },
     { file: "02_home", label: "Home" },
     { file: "03_workout_detail", label: "Workout Detail" },
-    { file: "04_active_session_active_set", label: "Active Session" },
-    { file: "05_active_session_summary", label: "Active Session Summary" },
+    { file: "03_workout_detail_(circuit)", label: "Workout Detail" },
+    { file: "04_active_session_(standard)_active_set", label: "Active Session" },
+    { file: "04_active_session_(circuit)_active_set", label: "Active Session" },
     {
-      file: "06_active_session_rest_timer",
+      file: "05_active_session_(standard)_summary",
+      label: "Active Session Summary",
+    },
+    {
+      file: "06_active_session_(standard)_rest_timer",
       label: "Active Session Rest Timer",
     },
     {
-      file: "07_active_session_personal_record",
+      file: "06_active_session_(circuit)_rest_timer",
+      label: "Active Session Rest Timer",
+    },
+    {
+      file: "07_active_session_(standard)_personal_record",
       label: "Active Session Personal Record",
+    },
+    {
+      file: "07_active_session_(circuit)_to_log",
+      label: "Active Session To Log",
     },
     {
       file: "08_active_session_now_playing",
@@ -80,13 +97,53 @@
     { file: "11_template_changes", label: "Template Changes" },
   ];
 
+  // Filenames mark workout-type-specific shots with "(circuit)" or "(standard)".
+  var workoutTagPattern = /_?\((circuit|standard)\)/;
+
+  function workoutTag(file) {
+    var match = file.match(workoutTagPattern);
+    return match ? match[1] : null;
+  }
+
   function prettify(slug) {
     return slug
+      .replace(workoutTagPattern, "")
       .replace(/^\d+[_-]/, "")
       .replace(/[_-]/g, " ")
       .replace(/\b\w/g, function (c) {
         return c.toUpperCase();
       });
+  }
+
+  function buildShotCard(opts) {
+    var tag = workoutTag(opts.file);
+    var tagLabel = tag ? tag.charAt(0).toUpperCase() + tag.slice(1) : "";
+    var fullLabel = tag ? opts.label + " (" + tagLabel + ")" : opts.label;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = opts.className;
+    btn.innerHTML =
+      '<span class="frame"><img src="' +
+      opts.src +
+      '" alt="' +
+      opts.altPrefix +
+      fullLabel +
+      opts.altSuffix +
+      '" loading="lazy" width="' +
+      opts.width +
+      '" height="' +
+      opts.height +
+      '"></span>' +
+      '<span class="cap">' +
+      opts.label +
+      (tag
+        ? '<span class="shot-tag shot-tag-' + tag + '">' + tagLabel + "</span>"
+        : "") +
+      "</span>";
+    btn.addEventListener("click", function () {
+      openLightbox(opts.src, fullLabel);
+    });
+    return btn;
   }
 
   var iosGallery = document.querySelector("[data-ios-gallery]");
@@ -96,26 +153,18 @@
     if (!iosGallery) return;
     iosGallery.innerHTML = "";
     iosSlugs.forEach(function (slug) {
-      var src = "Screenshots/iOS/" + iosVariant + "/" + slug + ".png";
-      var label = prettify(slug);
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "shot-card";
-      btn.innerHTML =
-        '<span class="frame"><img src="' +
-        src +
-        '" alt="Onus iPhone screenshot — ' +
-        label +
-        " (" +
-        iosVariant +
-        ' mode)" loading="lazy" width="280" height="609"></span>' +
-        '<span class="cap">' +
-        label +
-        "</span>";
-      btn.addEventListener("click", function () {
-        openLightbox(src, label);
-      });
-      iosGallery.appendChild(btn);
+      iosGallery.appendChild(
+        buildShotCard({
+          file: slug,
+          src: "Screenshots/iOS/" + iosVariant + "/" + slug + ".png",
+          label: prettify(slug),
+          className: "shot-card",
+          altPrefix: "Onus iPhone screenshot — ",
+          altSuffix: " (" + iosVariant + " mode)",
+          width: 280,
+          height: 609,
+        }),
+      );
     });
   }
 
@@ -135,23 +184,18 @@
   var watchGallery = document.querySelector("[data-watch-gallery]");
   if (watchGallery) {
     watchShots.forEach(function (shot) {
-      var src = "Screenshots/WatchOS/" + shot.file + ".png";
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "shot-card watch";
-      btn.innerHTML =
-        '<span class="frame"><img src="' +
-        src +
-        '" alt="Onus Apple Watch screenshot — ' +
-        shot.label +
-        '" loading="lazy" width="211" height="257"></span>' +
-        '<span class="cap">' +
-        shot.label +
-        "</span>";
-      btn.addEventListener("click", function () {
-        openLightbox(src, shot.label);
-      });
-      watchGallery.appendChild(btn);
+      watchGallery.appendChild(
+        buildShotCard({
+          file: shot.file,
+          src: "Screenshots/WatchOS/" + shot.file + ".png",
+          label: shot.label,
+          className: "shot-card watch",
+          altPrefix: "Onus Apple Watch screenshot — ",
+          altSuffix: "",
+          width: 211,
+          height: 257,
+        }),
+      );
     });
   }
 
