@@ -107,7 +107,8 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#starting-a-workout">Starting a Workout</a></li>
           <li><a href="#logging-a-workout">Logging a Workout</a></li>
-          <li><a href="#supersets-circuits">Supersets &amp; Circuits</a></li>
+          <li><a href="#supersets">Supersets</a></li>
+          <li><a href="#circuits">Circuit Workouts</a></li>
           <li><a href="#rest-timer">Rest Timer</a></li>
           <li><a href="#personal-records">Personal Records</a></li>
           <li><a href="#workouts-programs">Workouts &amp; Programs</a></li>
@@ -181,6 +182,12 @@
             <a href="#apple-watch-app">Apple Watch App</a>).
           </li>
         </ul>
+        <p>
+          Only one workout can be in progress at a time. While one is
+          running, the start buttons on Home are hidden, and starting from
+          the other device joins the workout already in progress instead of
+          replacing it.
+        </p>
 
         <h2 id="logging-a-workout">Logging a Workout</h2>
         <p>
@@ -206,8 +213,8 @@
             A <strong>Complete</strong> checkmark per set — tap it to log the
             set (and trigger the rest timer). Completing every set in an
             exercise automatically collapses it and expands the next one (for
-            a superset or circuit, every exercise in the group has to be
-            finished first — see below).
+            a superset, both exercises have to be finished first — see
+            below).
           </li>
         </ul>
         <p>
@@ -215,6 +222,12 @@
           <strong>elapsed time</strong> is always visible in the toolbar.
           When you're done, <strong>Finish Workout</strong> saves it to your
           history; <strong>Discard Workout</strong> throws it away.
+        </p>
+        <p>
+          Swipe the workout down to get back to the rest of the app. A
+          banner at the bottom of the screen keeps showing the workout
+          name, the exercise and set you're on, and any running timer. Tap
+          it to jump back in.
         </p>
         <p>
           If a workout was started from a template and you changed the plan
@@ -225,31 +238,111 @@
           as-is.
         </p>
 
-        <h2 id="supersets-circuits">Supersets &amp; Circuits</h2>
+        <h2 id="supersets">Supersets</h2>
         <p>
-          Group two or more exercises to perform back-to-back, round by
-          round. Group exactly two exercises and Onus calls it a
-          <strong>Superset</strong>; group three or more and it's a
-          <strong>Circuit</strong> — the same feature, just a different
-          label. To create one, multi-select exercises in a workout or
-          template and tap <strong>Group as Superset/Circuit</strong>.
+          A <strong>Superset</strong> pairs two exercises to perform
+          back-to-back, at your own pace. To create one, open a workout's
+          options menu, choose <strong>Add Superset</strong>, select two
+          exercises, and tap <strong>Group as Superset</strong>. (The option
+          needs at least two standalone exercises in the workout.)
         </p>
         <p>
-          Each group has its own name and settings: how many sets make up a
-          round, rest between exercises within a round (for circuits of 3+),
-          and rest after a full round before starting the next one. During a
-          workout, the group's card shows every member and only advances once
-          <strong>all</strong> of them have completed the current round — not
-          just the first one you finish.
+          Each superset has its own name, a <strong>Sets</strong> count, and
+          a <strong>Rests</strong> duration taken after each round. During a
+          workout, the superset's card shows both exercises and only moves
+          on once <strong>both</strong> have completed the current round. If
+          you remove one exercise from a superset, the other goes back to
+          being a regular standalone exercise.
+        </p>
+
+        <h2 id="circuits">Circuit Workouts</h2>
+        <p>
+          A <strong>Circuit</strong> turns a whole workout into a timed
+          interval session: Onus runs the clock and moves you from exercise
+          to exercise. To set one up, open the workout's options menu and
+          choose <strong>Convert Workout to Circuit</strong>. Every exercise
+          joins one circuit (any supersets are merged into it), and
+          exercises you add later join it automatically. To go back, choose
+          <strong>Convert Workout to Standard</strong>, which removes the
+          timing and makes every exercise standalone again.
+        </p>
+        <p>A circuit has four settings:</p>
+        <ul>
+          <li>
+            <strong>Sets</strong> — how many rounds to run. Every exercise in
+            the circuit always has the same number of sets.
+          </li>
+          <li>
+            <strong>Work</strong> — how long each exercise's interval lasts
+            (60 seconds by default).
+          </li>
+          <li>
+            <strong>Transition</strong> — rest between exercises within a
+            round (15 seconds by default).
+          </li>
+          <li>
+            <strong>Recovery</strong> — rest after a full round, before the
+            next one starts (your Default Duration rest by default).
+          </li>
+        </ul>
+        <p>
+          The −/+ buttons change these by your
+          <strong>Rest Timer → Increment</strong> setting. You can rename the
+          circuit and reorder its exercises from its header menu.
+        </p>
+        <p>
+          <strong>Running a circuit.</strong> On iPhone, tap
+          <strong>Start Circuit</strong> to begin the first work interval. On
+          Apple Watch, a 5-second "Starting in" countdown shows which
+          exercise is up first. The circuit then runs round by round: set 1
+          of every exercise, then set 2, and so on. The timer shows
+          <strong>Now:</strong> during work and <strong>Next:</strong> during
+          rests, plus where you are in the round. Work intervals are shown in
+          gold and rests in teal. The controls are <strong>Pause</strong>,
+          <strong>−</strong>/<strong>+</strong> (adjust the current phase by
+          your Increment), and <strong>Skip</strong> (end the current phase
+          now; skipping a work interval completes that set). If you change
+          the Work time mid-session, it applies to the next interval.
+        </p>
+        <p>
+          <strong>Logging reps.</strong> Since the timer finishes each set
+          for you, reps are confirmed afterwards. A set whose interval has
+          ended is waiting <strong>to log</strong>, shown with its values and
+          checkmark in gold. Onus pre-fills a suggestion from your previous
+          round, the template's target, or your last session. Tap the check
+          to log it as-is, or edit the values first. On Apple Watch, the
+          <strong>To Log</strong> page steps through the waiting sets with
+          the ‹ and › buttons. If you tap <strong>Finish Workout</strong>
+          with sets still unlogged, Onus offers to take you back to log them.
+        </p>
+        <p>
+          <strong>Automatic pause.</strong> So you don't miss an interval
+          while you're entering numbers, a circuit pauses on its own at the
+          next phase change when you're typing on iPhone, when you're on the
+          To Log page on the Watch, or when you've swiped the workout down
+          to the banner. If you've left Onus, you'll get a
+          <strong>Circuit Paused</strong> notification. Press play to pick
+          up where you left off.
+        </p>
+        <p>
+          Circuit sets don't count toward
+          <a href="#personal-records">Personal Records</a>, since timed
+          intervals aren't comparable to regular sets. Onus ships with a
+          preloaded <strong>Spartacus Circuit</strong> program if you want to
+          try one out.
         </p>
 
         <h2 id="rest-timer">Rest Timer</h2>
         <p>
-          Completing a working set automatically starts a rest timer with a
-          progress-filled bar. You can adjust the remaining time in either
-          direction or skip it outright, and it keeps counting even if you
-          background the app, alerting you with your chosen sound when it
-          ends.
+          In a standard workout, completing a set automatically starts a
+          rest timer (except after the last set). It uses the exercise's own
+          rest time, or your Default Duration if it doesn't have one. The
+          timer shows what's coming next (the exercise and set number) and
+          has <strong>Pause</strong>, <strong>−</strong>/<strong>+</strong>,
+          and <strong>Skip</strong> controls. The −/+ step is set in
+          <strong>Settings → Rest Timer → Increment</strong>. It keeps
+          counting even if you background the app, alerting you with your
+          chosen sound when it ends.
         </p>
 
         <h2 id="personal-records">Personal Records</h2>
@@ -260,7 +353,8 @@
           they appear — the active workout, workout summaries, history, and
           <a href="#progress-graphs">Progress Graphs</a> (where PR points are
           drawn larger and in a distinct color) — so your best lifts are
-          always easy to spot.
+          always easy to spot. Sets logged during a
+          <a href="#circuits">circuit</a> aren't counted as PRs.
         </p>
 
         <h2 id="workouts-programs">Workouts &amp; Programs</h2>
@@ -284,9 +378,35 @@
         </ul>
         <p>
           Both programs and workouts are fully editable — reorder exercises
-          and sets, group exercises into supersets/circuits, adjust targets,
-          or delete what you no longer need.
+          and sets, pair exercises into supersets, turn a workout into a
+          circuit, adjust targets, or delete what you no longer need. When
+          adding workouts to a program, the confirm button shows how many
+          you've selected (e.g. <strong>Add (3)</strong>). If you try to close
+          an editor with unsaved edits, Onus asks whether to
+          <strong>Discard Changes</strong> or <strong>Keep Editing</strong>.
         </p>
+        <p>
+          <strong>Copying.</strong> To start from something you already have,
+          tap the add button on either sub-tab and choose
+          <strong>Copy Existing</strong>, then pick the program or workout to
+          copy. The copy opens in the editor named "&lt;original&gt; (Copy)",
+          ready to rename, and nothing is saved until you tap Save.
+        </p>
+        <ul>
+          <li>
+            <strong>Copying a workout</strong> copies everything: notes,
+            exercises, sets and targets, rest times, and supersets/circuits.
+            The new workout stands alone and isn't added to any program.
+          </li>
+          <li>
+            <strong>Copying a program</strong> keeps its workouts in the same
+            order (but not its Active/Current status). By default the copy
+            shares the original's workouts, so editing one updates both. Turn
+            on <strong>Duplicate Workout Templates</strong> to give the new
+            program its own independent copies of each workout instead. You
+            can name each copy before saving.
+          </li>
+        </ul>
 
         <h2 id="exercise-library">Exercise Library</h2>
         <p>
@@ -300,10 +420,20 @@
           leave Onus.
         </p>
         <p>
+          Muscle groups are Chest, Back, Shoulders, Biceps, Triceps,
+          Forearms, Core, Quads, Hamstrings, Glutes, Calves, Full Body,
+          Cardio, and Other.
+        </p>
+        <p>
           You can also add your own <strong>custom exercises</strong> with a
-          name, muscle group, and equipment type — useful for movements not
-          in the built-in catalog or gym equipment that's a little different
-          from the standard. When adding exercises to a workout, you can
+          name, primary muscle, any number of secondary muscles, and
+          equipment type — useful for movements not in the built-in catalog
+          or gym equipment that's a little different from the standard.
+          Secondary muscles appear in brackets after the primary one, e.g.
+          "Chest (Triceps, Shoulders)". Filters and progress use the primary
+          muscle. To change or remove a custom exercise later, swipe left on
+          it in the library and tap <strong>Edit</strong> or
+          <strong>Delete</strong>. When adding exercises to a workout, you can
           multi-select several at once instead of adding them one at a time.
         </p>
 
@@ -364,29 +494,58 @@
           </li>
           <li>
             <strong>Active workout</strong> shows the current exercise, a
-            segmented progress bar for the exercise's sets (and your position
-            within a superset or circuit), and simple +/- adjusters for reps
-            and weight — plus live heart rate and calories from a connected
-            HealthKit workout session.
+            segmented progress bar for its sets (teal for done, pulsing for
+            the current set, red for skipped), and
+            <strong>REPS</strong> and <strong>LB/KG</strong> rows with −/+
+            buttons. Reps change by 1 and weight by the exercise's increment.
+            You can also turn the <strong>Digital Crown</strong> to adjust
+            whichever value is outlined, or tap the outlined value again to
+            type an exact number on a keypad. Buttons along the bottom step
+            to the previous or next set and complete the current one.
+          </li>
+          <li>
+            In a standard workout, the rest timer appears on the same
+            screen, with <strong>−</strong>/<strong>+</strong> around the
+            countdown and <strong>Pause</strong> and <strong>Skip</strong>
+            below it, plus what's up next. Circuit workouts get a dedicated
+            interval timer page, and the set screen becomes the
+            <strong>To Log</strong> page (see
+            <a href="#circuits">Circuit Workouts</a>).
+          </li>
+          <li>
+            Firm haptic taps let you know when to lift: three buzzes when
+            rest ends, two when a circuit work interval ends, and a tick for
+            each of the last three seconds of a circuit interval.
           </li>
           <li>
             Swipe over to the <strong>Now Playing</strong> screen to control
             music without leaving the workout.
           </li>
           <li>
-            A <strong>summary</strong> screen lists every exercise and set
-            for the in-progress workout, lets you add or remove sets, and
-            jump directly to any set. It flags whether you finished every set
-            or left some incomplete, and if you tap
+            A <strong>summary</strong> screen shows elapsed time, your live
+            heart rate, and active calories at the top, followed by every
+            exercise and set for the in-progress workout. You can add or
+            remove sets and jump directly to any set. It flags whether you
+            finished every set or left some incomplete, and if you tap
             <strong>Finish Workout</strong> with sets still open, Onus
             double-checks that you meant to before wrapping up.
           </li>
           <li>
-            Finished (or discarded) workouts sync back to iPhone
-            automatically via WatchConnectivity — no internet connection
-            involved, just a direct device-to-device link — and, just like on
-            iPhone, you'll get a chance to review and accept any changes back
-            into the template.
+            <strong>Working out with both devices.</strong> A workout started
+            on either iPhone or Apple Watch joins the other automatically
+            whenever they're in range, and both stay in sync while you
+            train. Log a set on one and it shows up on the other, the timer
+            matches on both, and the iPhone shows your Watch's live heart
+            rate and calories. If both devices change the same set at once,
+            the most recent change wins. Finishing or discarding on either
+            device ends the workout on both.
+          </li>
+          <li>
+            Workouts done only on the Watch sync back to iPhone automatically
+            via WatchConnectivity — no internet connection involved, just a
+            direct device-to-device link — and, just like on iPhone, you'll
+            get a chance to review and accept any changes back into the
+            template.
           </li>
           <li>
             A watch face complication gives you a one-tap shortcut straight
@@ -404,8 +563,9 @@
             <a href="#exercise-library">Exercise Library</a>.
           </li>
           <li>
-            <strong>Rest Timer</strong> — default duration, adjustment step
-            size, and completion sound.
+            <strong>Rest Timer</strong> — Default Duration, Increment (how
+            much the −/+ timer buttons and circuit settings change by: 5, 10,
+            15, 30, or 60 seconds), and completion Sound.
           </li>
           <li>
             <strong>Previous Set</strong> — show your last performance for
@@ -473,10 +633,14 @@
           With permission, Onus reads heart rate, active energy burned, and
           body mass (the last only to estimate calories when the Watch
           doesn't supply a measured value) to enrich your workout summaries.
-          Workouts tracked with the Apple Watch are also written back to
-          Apple Health so they show up alongside your other activity;
-          workouts logged from iPhone alone (without the Watch) aren't
-          written to Health. This is all handled by Apple's HealthKit
+          Every completed workout is also written to Apple Health so it shows
+          up alongside your other activity. Workouts tracked with the Apple
+          Watch are saved by the Watch with measured heart rate and calories.
+          Workouts logged from iPhone alone are saved by the iPhone with
+          estimated calories. A workout is never saved twice when you use
+          both devices. Strength workouts are saved as Traditional Strength
+          Training, and circuit workouts as High Intensity Interval Training. This is all
+          handled by Apple's HealthKit
           framework directly on your device — see the
           <a href="privacy.html">Privacy Policy</a> for details.
         </p>
