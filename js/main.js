@@ -51,11 +51,12 @@
     "18_active_session_(standard)_completed",
     "18_active_session_(circuit)_completed",
     "19_active_session_finish_workout",
-    "20_history_full",
-    "21_session_summary",
-    "22_session_summary_template_changes",
-    "23_progress_full",
-    "24_paywall",
+    "20_history_stats",
+    "21_history_sessions",
+    "22_session_summary",
+    "23_session_summary_template_changes",
+    "24_progress_full",
+    "25_paywall",
   ];
 
   var watchShots = [
